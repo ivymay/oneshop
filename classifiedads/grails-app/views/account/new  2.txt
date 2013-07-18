@@ -1,0 +1,100 @@
+<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+
+
+
+<td><g:link action="show" id="${accountInstance.id}">${fieldValue(bean: accountInstance, field: "name")}</g:link></td>
+					
+						<td>${fieldValue(bean: accountInstance, field: "username")}</td>
+					
+						<td>${fieldValue(bean: accountInstance, field: "password")}</td>
+					
+						<td>${fieldValue(bean: accountInstance, field: "address")}</td>
+					
+						<td>${fieldValue(bean: accountInstance, field: "emailAddress")}</td>
+					
+						<td>${fieldValue(bean: accountInstance, field: "phoneNumber")}</td>
+					
+					<form>
+					<label>Name</label>
+					<input type="text" placeholder="Full Name">
+					<label>Username</label>
+					<input type="text" placeholder="username">
+					<label>Password</label>
+					<input type="text" placeholder="Password">
+					<label>Address</label>
+					<input type="text" placeholder="house no., Street, Barangay, City/Province">
+					<label>Email Address</label>
+					<input type="text" placeholder="ex. jjreyes@yahoo.com">
+					<label>Phone Number</label>
+					<input type="text" placeholder="Phone Number">
+					<label>Gender</label>
+					<input type="text" placeholder="gender">
+						</form>
+						
+						
+						
+						
+						
+						<g:if test="${accountInstance?.name}">
+				<li class="fieldcontain">
+					<span id="name-label" class="property-label"><g:message code="account.name.label" default="Name" /></span>
+					
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${accountInstance}" field="name"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${accountInstance?.username}">
+				<li class="fieldcontain">
+					<span id="username-label" class="property-label"><g:message code="account.username.label" default="Username" /></span>
+					
+						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${accountInstance}" field="username"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${accountInstance?.password}">
+				<li class="fieldcontain">
+					<span id="password-label" class="property-label"><g:message code="account.password.label" default="Password" /></span>
+					
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${accountInstance}" field="password"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${accountInstance?.address}">
+				<li class="fieldcontain">
+					<span id="address-label" class="property-label"><g:message code="account.address.label" default="Address" /></span>
+					
+						<span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${accountInstance}" field="address"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${accountInstance?.emailAddress}">
+				<li class="fieldcontain">
+					<span id="emailAddress-label" class="property-label"><g:message code="account.emailAddress.label" default="Email Address" /></span>
+					
+						<span class="property-value" aria-labelledby="emailAddress-label"><g:fieldValue bean="${accountInstance}" field="emailAddress"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${accountInstance?.phoneNumber}">
+				<li class="fieldcontain">
+					<span id="phoneNumber-label" class="property-label"><g:message code="account.phoneNumber.label" default="Phone Number" /></span>
+					
+						<span class="property-value" aria-labelledby="phoneNumber-label"><g:fieldValue bean="${accountInstance}" field="phoneNumber"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${accountInstance?.gender}">
+				<li class="fieldcontain">
+					<span id="gender-label" class="property-label"><g:message code="account.gender.label" default="Gender" /></span>
+					
+						<span class="property-value" aria-labelledby="gender-label"><g:fieldValue bean="${accountInstance}" field="gender"/></span>
+					
+				</li>
+				</g:if>

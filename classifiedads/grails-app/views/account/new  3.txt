@@ -1,0 +1,46 @@
+
+		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
+		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
+		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
+		
+		<ul>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
+				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+			</ul>
+			
+			<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix">
+					<li class>
+						<a href= "#home">
+							<i class="icon-chevron-right"></i>
+							Home
+						</a>
+					</li>
+					<li class>
+						<a href= "#create">
+							<i class="icon-chevron-right"></i>
+							New Account
+						</a>
+					</li>
+				</ul>
+			
+				</div>
+			</div>
+				
+				
+				
+				<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li class="active">
+						<g:link controller="account" action="list">Account</g:link>
+						
+					
+				
+			</div>
+		</div>
+				</ul>
+					</li>
